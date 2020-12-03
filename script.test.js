@@ -145,7 +145,7 @@ describe('meme', () => {
         expect(memeLikesElement.text()).toEqual('100 Likes');
     });
 
-    test('should decrease like numbers when dislike() is called', () => {
+    test('should decrease like numbers when dislike() is called and updateLikeNumberElement() is called', () => {
         const ctrl = getController();
         const spy = jest.spyOn(ctrl, 'updateLikeNumberElement');
         
@@ -160,7 +160,7 @@ describe('meme', () => {
         expect(spy).toHaveBeenCalledWith(-2);
     });
 
-    test('should decrease like numbers when like() is called', () => {
+    test('should increase like numbers when like() is called and updateLikeNumberElement() is called', () => {
         const ctrl = getController();
         const spy = jest.spyOn(ctrl, 'updateLikeNumberElement');
         
